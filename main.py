@@ -25,13 +25,6 @@ if characterLengthReq % 5 == 0:
 else:
     numWords = (characterLengthReq//5) + secrets.choice([1, 2])
 
-
-
-print(numWords)
-print(characterLengthReq)
-print(uppercaseReq)
-print(numbersReq)
-print(symbolsReq)
 #number of words
 #number and symbol location
 
