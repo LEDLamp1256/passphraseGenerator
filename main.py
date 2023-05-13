@@ -58,11 +58,15 @@ def substitution(passwordSub, substituteDict):
 
 
 if secrets.choice([1, 2]) == 1:
-    passwordJoin = substitution(passwordJoin, numberSubstitutes)
-    passwordJoin = substitution(passwordJoin, symbolSubstitutes)
+    if numbersReq:
+        passwordJoin = substitution(passwordJoin, numberSubstitutes)
+    if symbolsReq:
+        passwordJoin = substitution(passwordJoin, symbolSubstitutes)
 else:
-    passwordJoin = substitution(passwordJoin, symbolSubstitutes)
-    passwordJoin = substitution(passwordJoin, numberSubstitutes)
+    if symbolsReq:
+        passwordJoin = substitution(passwordJoin, symbolSubstitutes)
+    if numbersReq:
+        passwordJoin = substitution(passwordJoin, numberSubstitutes)
 
 
 print(passwordJoin)
