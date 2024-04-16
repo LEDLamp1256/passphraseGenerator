@@ -16,9 +16,9 @@ numberSubstitutes = {"i" : "1", "e" : "3", "s" : "5", "b" : "8", "o" : "0"}
 symbolSubstitutes = {"i" : "!", "a" : "@", "t" : "+"}
 
 characterLengthReq = int(input("How long should the password be?"))
-uppercaseReq = eval(input("Does the password need to contain uppercase characters? (T/F)").capitalize())
-numbersReq = eval(input("Does the password require numbers? (T/F)").capitalize())
-symbolsReq = eval(input("Does the password require symbols? (T/F)").capitalize())
+uppercaseReq = eval(input("Does the password need to contain uppercase characters? (True/False)").capitalize())
+numbersReq = eval(input("Does the password require numbers? (True/False)").capitalize())
+symbolsReq = eval(input("Does the password require symbols? (True/False)").capitalize())
 
 if characterLengthReq % 5 == 0:
     numWords = (characterLengthReq//5) + secrets.choice([0, 1])
